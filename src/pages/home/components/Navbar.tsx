@@ -18,6 +18,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
@@ -34,16 +35,17 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "glass shadow-2xl shadow-black/40"
+            ? "shadow-2xl shadow-black/40"
             : "bg-transparent border-none shadow-none"
         }`}
         style={{
-          borderBottom: "none",
+          borderBottom: scrolled ? "1px solid rgba(255, 255, 255, 0.08)" : "none",
           outline: "none",
           boxShadow: scrolled ? undefined : "none",
-          backdropFilter: scrolled ? undefined : "none",
+          backdropFilter: scrolled ? "blur(24px)" : "none",
+          WebkitBackdropFilter: scrolled ? "blur(24px)" : "none",
           background: scrolled
-            ? undefined
+            ? "linear-gradient(180deg, rgba(10, 10, 15, 0.96) 0%, rgba(10, 10, 15, 0.92) 100%)"
             : "linear-gradient(180deg, rgba(10, 10, 15, 0.92) 0%, rgba(10, 10, 15, 0.45) 68%, rgba(10, 10, 15, 0) 100%)",
         }}
       >
