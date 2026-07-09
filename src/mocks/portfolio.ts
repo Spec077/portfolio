@@ -4,6 +4,7 @@ import otpixImage from "../assets/otpix.png";
 import fixmatchImage from "../assets/fixmatch.png";
 import richoloImage from "../assets/richolo.png";
 import hisproImage from "../assets/hispro.png";
+import uahImage from "../assets/uah.png";
 
 export interface Project {
   id: string;
@@ -90,13 +91,13 @@ export const projects: Project[] = [
    id: "United Ace Healthcare",
    title: "UAH",
 description: "UAH's landing Page",
-image : hisproImage,
+image : uahImage,
 tags: ["React", "Tailwind CSS", "Vercel"],
 role: "Frontend Dev",
 liveUrl: "https://unitedacehealthcare.vercel.app",
 githubUrl: "#",
 featured: false,
-accentColor: "rgb(220, 167, 235),
+accentColor: "rgb(220, 167, 235)",
 },
 ];
 
