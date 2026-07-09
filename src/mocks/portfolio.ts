@@ -86,6 +86,18 @@ export const projects: Project[] = [
     featured: false,
     accentColor: "cyan",
   },
+  {
+   id: "United Ace Healthcare",
+   title: "UAH",
+description: "UAH's landing Page",
+image : hisproImage,
+tags: ["React", "Tailwind CSS", "Vercel"],
+role: "Frontend Dev",
+liveUrl: "https://unitedacehealthcare.vercel.app",
+githubUrl: "#",
+featured: false,
+accentColor: "rgb(220, 167, 235),
+},
 ];
 
 export const services: Service[] = [
